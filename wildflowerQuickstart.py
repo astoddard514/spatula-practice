@@ -1,4 +1,3 @@
-# imports we'll use in this example
 from spatula import (
     HtmlPage, HtmlListPage, CSS, XPath, SelectorError
 )
@@ -7,7 +6,7 @@ from spatula import (
 class WildflowerList(HtmlListPage):
     source = "https://www.minnesotawildflowers.info/page/plants-by-name"
 
-    # each row represents an employee
+    # each row represents a wildflower
     selector = CSS(".wfList tbody tr")
 
     def process_item(self, item):
