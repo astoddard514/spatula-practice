@@ -11,10 +11,10 @@ class WildflowerList(HtmlListPage):
 
     def process_item(self, item):
         # this function is called for each <tr> we get from the selector
-        # we know there are 4 <tds>
-        Latin, common = item.getchildren()
+        # 2 <tds>
+        LatinLink, common = item.getchildren()
         return dict(
-            Latin=Latin.text,  # next thing to research is scraping just the <a> text from these links
+            Latin=LatinLink.text,  # next thing to research is scraping just the <a> text from these links
             common=common.text,
         )
 

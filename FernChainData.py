@@ -16,7 +16,7 @@ class FernList(HtmlListPage):
         common = item.getchildren()
          # return EmployeeDetail(
         return dict(
-            common=common.a.get_text(),
+            common=common.text,
             )
              # source=XPath("./a/@href").match_one(details),
         
