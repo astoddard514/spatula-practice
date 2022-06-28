@@ -13,7 +13,7 @@ class FernList(HtmlListPage):
      def process_item(self, item):
          # this function is called for each <tr> we get from the selector
          # we know there are 4 <tds>
-        common = item.getchildren()
+        common = item.getchildren() # I need to rework getting the list components . . .
          # return EmployeeDetail(
         return dict(
             common=common.text,
